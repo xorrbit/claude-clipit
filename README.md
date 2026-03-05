@@ -65,6 +65,22 @@ Then restart Claude Code.
 
 Just type `/clipit` in Claude Code. The last response will be copied to your clipboard as plain text.
 
+You can also extract a specific part of the response by describing what you want:
+
+```
+/clipit the curl command
+/clipit just the python function
+/clipit the SQL query
+```
+
+This uses the LLM to extract just that part — no surrounding text or explanation. Code is automatically copied verbatim (no normalization or markdown stripping).
+
+There's also a shortcut for curl commands:
+
+```
+/clipcurl
+```
+
 ### Flags
 
 Flags can be combined (e.g. `/clipit raw md`):
@@ -134,7 +150,7 @@ Plugins also use tokens — they're loaded into Claude's context as tool definit
 
 ```bash
 rm ~/.claude/scripts/clipit-save.sh ~/.claude/scripts/clipit-copy.sh
-rm -rf ~/.claude/skills/clipit ~/.claude/clipit
+rm -rf ~/.claude/skills/clipit ~/.claude/skills/clipcurl ~/.claude/clipit
 ```
 
 Then remove the clipit hook entry from `~/.claude/settings.json`.

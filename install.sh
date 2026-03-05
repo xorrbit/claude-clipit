@@ -22,9 +22,10 @@ cp "$SCRIPT_DIR/scripts/clipit-save.sh" ~/.claude/scripts/clipit-save.sh
 cp "$SCRIPT_DIR/scripts/clipit-copy.sh" ~/.claude/scripts/clipit-copy.sh
 chmod +x ~/.claude/scripts/clipit-save.sh ~/.claude/scripts/clipit-copy.sh
 
-# Install the skill
-mkdir -p ~/.claude/skills/clipit
+# Install skills
+mkdir -p ~/.claude/skills/clipit ~/.claude/skills/clipcurl
 cp "$SCRIPT_DIR/skills/clipit/SKILL.md" ~/.claude/skills/clipit/SKILL.md
+cp "$SCRIPT_DIR/skills/clipcurl/SKILL.md" ~/.claude/skills/clipcurl/SKILL.md
 
 # Create the clipit data directory
 mkdir -p ~/.claude/clipit
